@@ -23,6 +23,7 @@ public class QuestionController {
 
     @GetMapping("category/{category}")
     public ResponseEntity<List<Question>> getQuestionsByCategory(@PathVariable String category){
+        System.out.println(questionService.getQuestionsByCategory(category));
         return questionService.getQuestionsByCategory(category);
     }
 
